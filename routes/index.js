@@ -5,11 +5,11 @@ var quizController = require('../controllers/quiz_controller');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Bienvenido a Quiz', subtitle: 'El portal donde podrá crear sus propias adivinanzas ;-)' });
+  res.render('index', { title: 'Bienvenido a Quiz', subtitle: 'El portal donde podrá crear sus propias adivinanzas ;-)', errors: [] });
 });
 
 router.get('/author', function(req, res, next) {
-  res.render('author', {});
+  res.render('author', {errors: []});
 });
 
 // Autoload de comandos con :quizId

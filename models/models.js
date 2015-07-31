@@ -46,7 +46,7 @@ sequelize.sync().then(function() {
       Quiz.create( {pregunta: 'Capital de Portugal', respuesta: 'Lisboa'})
       .then(function(){console.log('Base de datos inicializada')});
     }
-    else {console.log('Base de datos contiene registros.')};
+    else {console.log('Base de datos ya contiene registros.')};
   });
 });
 
