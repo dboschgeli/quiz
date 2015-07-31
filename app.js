@@ -42,6 +42,20 @@ app.use( function(req, res, next) {
     next();
 });
 
+// Autologout
+app.use( function(req, res, next) {
+  var ahora = new Date().getTime();                           
+  if ( req.session.ultimaTransaccion && req.session.user) {                 
+      if ((ahora-req.session.ultimaTransaccion)>120000){
+          delete req.session.user;
+          res.redirect("/login");
+      }
+  }
+  req.session.ultimaTransaccion = ahora;
+  res.locals.session = req.session;
+  next();
+});
+
 
 app.use('/', routes);
 
