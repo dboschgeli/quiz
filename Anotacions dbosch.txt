@@ -1,0 +1,2 @@
+Al mòdul 8, punt 11, no funciona la validació de camps si no desinstal.lem sequalize i instalem la versió 2.0.0.
+
