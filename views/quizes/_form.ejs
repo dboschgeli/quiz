@@ -2,5 +2,18 @@
 <p><input type="text" id="preg" name="quiz[pregunta]" value="<%= quiz.pregunta %>"/></p>
 <label for="resp" class="rem">Respuesta:</label>
 <p><input type="text" id="resp" name="quiz[respuesta]" value="<%= quiz.respuesta %>"/></p>
+<label for="tema" class="rem">Tema:</label>
+<p>
+  <select id="tema" name="quiz[tema]">
+		<option value="otro">Otro</option>
+		<option value="humanidades">Humanidades</option>
+		<option value="ocio">Ocio</option>
+		<option value="ciencia">Ciencia</option>
+		<option value="tecnología">Tecnología</option>
+	</select>
+  <script type="text/javascript">
+		document.getElementById("tema").value = "<%= quiz.tema %>";
+	</script>
+</p>
 <a href="/quizes"><button type="button">Cancelar</button></a>
 <input type="submit" value="Salvar"/>
